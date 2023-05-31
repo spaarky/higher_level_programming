@@ -5,4 +5,4 @@ if __name__== "__main__":
     if len(sys.argv) > 1:
         for index in range(1, len(sys.argv)):
             result += int(sys.argv[index])
-    print('{:d}'.formaat(result))
+    print('{:d}'.format(result))
