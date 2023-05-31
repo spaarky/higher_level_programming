@@ -6,6 +6,7 @@ if __name__ == '__main__':
     if len(argv) != 4:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
+
     operator = argv[2]
     function = {"+": add, "-": sub, "*": mul, "/": div}
     if operator not in function:
@@ -14,4 +15,5 @@ if __name__ == '__main__':
 
     a = int(argv[1])
     b = int(argv[3])
-    print('{:d} {:s} {:d} = {:d}'.format(a, operator, b, function[operator](a, b)))
+    print('{:d} {:s} {:d} = {:d}'.
+          format(a, operator, b, function[operator](a, b)))
