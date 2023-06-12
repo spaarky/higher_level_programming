@@ -8,5 +8,4 @@ class Rectangle:
     """
     Defines empty class rectangle
     """
-    def __init__(self):
-        pass
+    pass
