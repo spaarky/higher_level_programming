@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module 1-square
 Define class Square with private attribute size and validate size
@@ -14,6 +15,8 @@ class Square:
     Functions:
         __init__(self, size)
         area(self)
+        def size(self)
+        def size(self, value)
     """
     def __init__(self, size=0):
         """
