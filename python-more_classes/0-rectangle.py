@@ -4,7 +4,7 @@ Module 0-rectangle
 Contains class Rectangle
 """
 
-class Rectangle:
+class Rectangle():
     """
     Defines empty class rectangle
     """
