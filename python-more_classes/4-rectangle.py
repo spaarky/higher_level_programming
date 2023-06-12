@@ -23,6 +23,7 @@ class Rectangle:
         def area(self)
         def perimeter(self)
         def __str__(self)
+        def __repr__(self)
     """
     def __init__(self, width=0, height=0):
         """ Initialize rectangles """
@@ -85,4 +86,4 @@ class Rectangle:
 
     def __repr__(self):
         """ String representation to recreate new instance """
-        print('Rectangle({}, {})'.format(self.__width, self.__height))
+        print('Rectangle({:d}, {:d})'.format(self.width, self.height))
