@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module 1-square
-Define class Square with private attribute size
+Define class Square with private attribute size and validate size
 """
 
 
@@ -10,14 +10,14 @@ class Square:
     class Square definition
 
     Args:
-        size: size of a side of the square
+        size (int): size of a side of the square
     """
     def __init__(self, size):
         """
         Initialize square
 
         Attribute:
-            size: size of a side in the square
+            __size: size of a side in the square
         """
         if type(size) is not int:
             raise TypeError('size must be an integer')
@@ -25,4 +25,3 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = size
-
