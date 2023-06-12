@@ -17,6 +17,7 @@ class Square:
         area(self)
         def size(self)
         def size(self, value)
+        def my_print(self):
     """
     def __init__(self, size=0):
         """
