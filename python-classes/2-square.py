@@ -12,12 +12,12 @@ class Square:
     Args:
         size (int): size of a side of the square
     """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """
         Initialize square
 
         Attribute:
-            __size: size of a side in the square
+            __size (int): size of a side in the square, defaults to 0 if None
         """
         if type(size) is not int:
             raise TypeError('size must be an integer')
