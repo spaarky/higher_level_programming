@@ -20,6 +20,8 @@ class Rectangle:
         width(self, value)
         height(self)
         height(self, value)
+        def area(self)
+        def perimeter(self)
     """
     def __init__(self, width=0, height=0):
         """ Initialize rectangles """
