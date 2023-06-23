@@ -28,8 +28,10 @@ class Student():
     def to_json(self):
         """
         Returns:
-            Dictionary description with simple data structure
-            (list, dictionary, dictionary, string)
-            for JSON serialization of an object
+            dictionaryu representation of student
         """
-        self.__dict__
+        return {
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "age": self.age
+        }
