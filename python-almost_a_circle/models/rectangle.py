@@ -106,3 +106,51 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError('y must be >= 0')
         self.__y = value
+
+    def area(self):
+        """
+        Return area
+        """
+        return self.__height * self.__width
+
+    def display(self):
+        """
+        Print to stdout a rectangle using #'s
+        """
+        print('\n' * self.__y + '\n'.join(' ' * self.__x + '#' * self.__width for index in range(self.__height)))
+
+    def __str__(self):
+        """
+        Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.__class__.__name__, self.id, self.__x, self.__y,
+            self.__width, self.__height)
+
+    def update(self, *args,**kwargs):
+        """
+
+        """
+        if args:
+            for index, value in enumerate(args):
+                if index is 0:
+                    self.id = value
+                elif index is 1:
+                    self.width = value
+                elif index is 2:
+                    self.height = value
+                elif index == 3:
+                    self.x = value
+                else:
+                    self.y = value
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
