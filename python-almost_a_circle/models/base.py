@@ -43,6 +43,15 @@ class Base():
             f.write(cls.to_json_string(objs))
 
     @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Save json strings of all instances into file
+        """
+        if list_dictionaries is None:
+            list_dictionaries = []
+        return json.dumps(list_dictionaries)
+
+    @staticmethod
     def from_json_string(json_string):
         """Returns Python obj of JSON string representation"""
         if json_string is None or len(json_string) == 0:
