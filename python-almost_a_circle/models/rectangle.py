@@ -117,7 +117,9 @@ class Rectangle(Base):
         """
         Print to stdout a rectangle using #'s
         """
-        print('\n' * self.__y + '\n'.join(' ' * self.__x + '#' * self.__width for index in range(self.__height)))
+        print('\n' * self.__y +
+              '\n'.join(' ' * self.__x + '#' * self.__width
+                        for index in range(self.__height)))
 
     def __str__(self):
         """
@@ -127,7 +129,7 @@ class Rectangle(Base):
             self.__class__.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height)
 
-    def update(self, *args,**kwargs):
+    def update(self, *args, **kwargs):
         """
 
         """
