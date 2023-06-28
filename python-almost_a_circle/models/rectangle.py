@@ -20,10 +20,13 @@ class Rectangle(Base):
         __x              __y
     Methods:
         __init__(self, width, height, x=0, y=0, id=None):
+        update(self, *args, **kwargs)
         width(self)      width(self, value)
         height(self)     height(self, value)
         x(self)          x(self, value)
         y(self)          y(self, value)
+        area(self)       display(self)
+        __str__
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -156,3 +159,15 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """
+        Return dictionary representation
+        """
+        dic = {}
+        dic["id"] = self.id
+        dic["width"] = self.width
+        dic["height"] = self.height
+        dic["x"] = self.x
+        dic["y"] = self.y
+        return dic
