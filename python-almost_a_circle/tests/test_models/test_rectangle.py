@@ -95,7 +95,6 @@ class TestBase(unittest.TestCase):
             print(Rectangle.__x)
             print(Rectangle.__y)
 
-
     """
     Test args given
     """
@@ -114,7 +113,6 @@ class TestBase(unittest.TestCase):
             Rectangle()
             Rectangle(None)
 
-
     """
     Test class
     """
@@ -124,7 +122,6 @@ class TestBase(unittest.TestCase):
         Test class created is indeed Rectangle
         """
         self.assertEqual(type(Rectangle(1, 2)), Rectangle)
-
 
     """
     Test methods

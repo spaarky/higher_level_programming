@@ -42,7 +42,6 @@ class TestBase(unittest.TestCase):
         except:
             pass
 
-
     """
     Test attributes
     """
@@ -71,7 +70,6 @@ class TestBase(unittest.TestCase):
             print(Base.__nb_objects)
             print(Base.nb_objects)
 
-
     """
     Test args given
     """
@@ -83,7 +81,6 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(50, 50)
 
-
     """
     Test class
     """
@@ -93,7 +90,6 @@ class TestBase(unittest.TestCase):
         Test class created is indeed Base
         """
         self.assertTrue(Base(100), self.__class__ == Base)
-
 
     """
     Test Python obj to JSON
@@ -130,7 +126,6 @@ class TestBase(unittest.TestCase):
         self.assertTrue(len(d3) == 0)
         self.assertTrue(type(strd3) == str)
         self.assertTrue(strd3, "[]")
-
 
     """
     Test JSON to Python object
@@ -170,7 +165,6 @@ class TestBase(unittest.TestCase):
         self.assertTrue(type(strs3) == list)
         self.assertTrue(strs3 == [])
 
-
     """
     Test creating instance from dictionary
     """
@@ -185,7 +179,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str(r), '[Rectangle] (99) 1/2 - 3/5')
         self.assertEqual(str(r2), '[Rectangle] (99) 1/2 - 3/5')
         self.assertIsNot(r, r2)
-
 
     """
     Test saving JSON string repr of dict to class specific file
@@ -218,7 +211,6 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
             self.assertEqual('[]', file.read())
-
 
     """
     Test loading list of instances from JSON string repr of dict in file

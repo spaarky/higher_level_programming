@@ -35,7 +35,6 @@ class TestBase(unittest.TestCase):
     Tests for models/square.py
     """
 
-
     """
     Test attributes
     """
@@ -79,7 +78,6 @@ class TestBase(unittest.TestCase):
             Square(-1)
             Square(9).size(-9)
 
-
     """
     Test args given
     """
@@ -97,7 +95,6 @@ class TestBase(unittest.TestCase):
             Square()
             Square(None)
 
-
     """
     Test class
     """
@@ -108,7 +105,6 @@ class TestBase(unittest.TestCase):
         """
         s = Square(10)
         self.assertEqual(type(s), Square)
-
 
     """
     Test methods
