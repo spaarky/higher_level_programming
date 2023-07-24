@@ -1,4 +1,4 @@
 -- list all tables in database passed as argument
 -- cat [filename] | mysql -hlocalhost -uroot -p mysql
 
-show tables
+SHOW tables;
