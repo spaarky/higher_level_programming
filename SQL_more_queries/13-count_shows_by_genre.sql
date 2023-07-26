@@ -1,4 +1,5 @@
 -- task 13
+-- MySQL
 
 SELECT tv_genres.name AS genre, COUNT(*) AS 'number_shows'
 FROM tv_genres
