@@ -23,10 +23,9 @@ if __name__ == "__main__":
     session = Session()
 
     # query python
-    state = session.query(State).ordered_by(name=argv[4]).first()
+    state = session.query(State).filter_by(name=argv[4]).first()
     if state:
-        print("{:d}".format(state))
+        print("{:d}".format(state.id))
     else:
-        print("Not Found")
-
+        print("Not found")
     session.close()
