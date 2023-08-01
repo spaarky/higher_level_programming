@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-delete from table states with names containing letter 'a'
+return all cities from database via python
 parameters given to script: username, password, database
 """
 

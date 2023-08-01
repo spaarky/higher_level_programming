@@ -23,8 +23,8 @@ if __name__ == "__main__":
     session = Session()
 
     # query python
-    state = session.query(State).filter(State.name.like('%a%')).all()
-    for letter in state:
+    states = session.query(State).filter(State.name.like('%a%')).all()
+    for letter in states:
         session.delete(letter)
 
     session.commit()
