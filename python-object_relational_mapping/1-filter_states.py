@@ -1,14 +1,24 @@
 #!/usr/bin/python3
 """
-Lists all states starting with N (upper N) from the database hbtn_0e_0_usa
+return states starting with 'N'
+parameters given to script: username, password, database
 """
-import MySQLdb
-import sys
 
+import MySQLdb
+from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+
+    # connect to database
+    db = MySQLdb.connect(user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
+
+    # python query
     cursor = db.cursor()
-    cursor.execute(
-        "SELECT * FROM `states` WHERE name LIKE 'N%' ORDER BY id ASC")
-    [print(state) for state in cursor.fetchall()]
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    for row in cursor.fetchall():
+        if row[1][0] == 'N':
+            print(row)
+    cursor.close()
+    db.close()
