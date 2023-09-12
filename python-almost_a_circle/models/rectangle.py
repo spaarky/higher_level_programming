@@ -138,11 +138,11 @@ class Rectangle(Base):
         """
         if args:
             for index, value in enumerate(args):
-                if index is 0:
+                if index == 0:
                     self.id = value
-                elif index is 1:
+                elif index == 1:
                     self.width = value
-                elif index is 2:
+                elif index == 2:
                     self.height = value
                 elif index == 3:
                     self.x = value
